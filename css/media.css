@@ -1,56 +1,45 @@
-/*DOCUMENTO CSS*/
+/*DOCMUENTO CSS*/
 
-*{margin: 0;
-  padding: 0;}
+* {MARGIN:0;
+      padding: 0; }
 
+      section, div {box-sizing: border-box;}
 
-section, div { box-sizing: border-box; }
+      .contenedor {display: flex;
+    width: 100;
+background: aqua;
+padding: 15px;
+flex-flow: column wrap;}
 
-/*Encabezados*/
+      .items { width: 100%;
+        background: orange;
+        margin-bottom: 15px}
 
-h2 { display: block;
-     width: 100%;
-     padding: 20px 0px;
-     background-color: coral; }
+        /*Media Queries*/
 
-/*LAYOUT*/
+        @media only screen and (min-width: 580px) 
+        {  h3 {color: whitesmoke;
+            text-align: center;}
+            .items { height: 100px;
+                    background: yellowgreen;}   }
+                    
+    /*PANTALLAS DE MAS DE 780PX*/
 
-.media { width: 100%; 
-         padding: 15px;
-         background-color: blueviolet;}
-
-.container { width: 100%;
-             display: flex; 
-             flex-direction: column;}
-
-.items { width: 100%; }
-
-.items img {width: 100%;}
-
-/*MEDIA QUIERES*/
-
-@media only screen and (min-width:500px) { 
-
-    .media { background-color: chartreuse; }
-
-    h2 {  background-color: cyan;}
+    @media only screen and (min-width: 780px){
+    .contenedor {background: blue;}
+    h3 { color: blue;}
 }
 
-@media only screen and (min-width:992px) { 
 
-    .media { background-color: rgb(255, 72, 0); }
+    @media only screen and (min-width: 1380px ) {
+    .contenedor {
+        flex-flow: row wrap;
+        width: 60%;
+        margin: auto;
+    }
 
-    h2 {  background-color: rgb(27, 190, 21);}
-
-    .container { flex-direction: row; }
-
-    .items { padding: 15px; }
-
-
-}
-
-@media only screen and (min-width:1280px) { 
-
-    .container { width: 80%;
-                 margin: auto; }
+    .items {
+        width: 33.33%;
+        margin-bottom: 0px;
+    }
 }
